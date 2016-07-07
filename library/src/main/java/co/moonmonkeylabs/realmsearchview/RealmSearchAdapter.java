@@ -70,7 +70,7 @@ public abstract class RealmSearchAdapter<T extends RealmObject, VH extends Realm
             Sort sortOrder,
             String sortKey,
             String basePredicate) {
-        super(context, null, true, true);
+        super(context, null, true, false);
         this.realm = realm;
         this.filterKey = filterKey;
         this.useContains = useContains;
