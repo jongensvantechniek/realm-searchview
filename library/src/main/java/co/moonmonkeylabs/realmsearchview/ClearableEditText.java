@@ -90,7 +90,7 @@ public class ClearableEditText extends EditText
         return text != null && !text.isEmpty();
     }
 
-    private void setClearIconVisible(boolean visible) {
+    public void setClearIconVisible(boolean visible) {
         boolean wasVisible = (getCompoundDrawables()[2] != null);
         if (visible != wasVisible) {
             Drawable x = visible ? clearDrawable : null;
