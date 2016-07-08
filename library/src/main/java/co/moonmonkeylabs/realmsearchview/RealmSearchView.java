@@ -3,6 +3,7 @@ package co.moonmonkeylabs.realmsearchview;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Handler;
+import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
@@ -109,6 +110,18 @@ public class RealmSearchView extends LinearLayout {
         addFooterOnIdle = typedArray.getBoolean(R.styleable.RealmSearchView_rsvAddFooter, false);
 
         typedArray.recycle();
+    }
+
+    public void addItemDecoration(RecyclerView.ItemDecoration decor) {
+        realmRecyclerView.addItemDecoration(decor);
+    }
+
+    public void addItemDecoration(RecyclerView.ItemDecoration decor, int index) {
+        realmRecyclerView.addItemDecoration(decor, index);
+    }
+
+    public void removeItemDecoration(RecyclerView.ItemDecoration decor) {
+        realmRecyclerView.removeItemDecoration(decor);
     }
 
     public void setAdapter(RealmSearchAdapter adapter) {
